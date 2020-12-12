@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/Relative_Layout"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <SurfaceView
+            android:id="@+id/camera_Preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--        <FrameLayout-->
+        <!--                android:id="@+id/camera_Preview"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                tools:ignore="MissingConstraints"></FrameLayout>-->
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <android.gesture.GestureOverlayView
+            android:id="@+id/gestures"
+            android:layout_width="727dp"
+            android:layout_height="413dp"
+            android:fadeEnabled="false"
+            android:fadeOffset="500000"
+            android:gestureColor="#000000"
+            android:gestureStrokeType="multiple"
+            android:uncertainGestureColor="#000000"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="-2dp"
+            tools:visibility="visible"></android.gesture.GestureOverlayView>
+
+        <LinearLayout
+            android:layout_width="362dp"
+            android:layout_height="78dp"
+
+            android:background="#3E000000"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <Button
+                android:id="@+id/button_capture"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/screenshot"
+                app:backgroundTint="#DDDDDD"
+                app:srcCompat="@drawable/screenshot" />
+
+            <Button
+                android:id="@+id/imageButton2"
+                android:layout_width="61dp"
+                android:layout_height="66dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/text3"
+
+                app:backgroundTint="#DDDDDD"
+                app:srcCompat="@drawable/text3" />
+
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="58dp"
+                android:layout_height="69dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FF0000"
+                android:textOff="Start"
+                android:textOn="Stop"></ToggleButton>
+
+            <Button
+                android:id="@+id/imageButton"
+                android:layout_width="16dp"
+                android:layout_height="70dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/pentool"
+                app:backgroundTint="#FFFFFF"
+                app:srcCompat="@drawable/pentool" />
+
+            <Button
+                android:id="@+id/clearbutton"
+                android:layout_width="6dp"
+                android:layout_height="54dp"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/clear"
+                app:backgroundTint="#FFFFFF" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3E000000"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/camera_Preview" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
+
